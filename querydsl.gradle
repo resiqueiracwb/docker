@@ -1,0 +1,37 @@
+repositories {
+    mavenCentral()
+}
+
+apply plugin: "com.ewerk.gradle.plugins.querydsl"
+apply plugin: 'idea'
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+compileQuerydsl { options.annotationProcessorPath = configurations.querydsl }
+
+querydsl {
+    querydslDefault = true
+    jpa = true
+}
+
+idea {
+    module {
+        sourceDirs += file('src/querydsl/')
+        generatedSourceDirs += file('src/querydsl/')
+    }
+}
+def queryDslVersion = '4.1.3'
+def lombokVersion = '1.18.4'
+dependencies {
+    // QueryDSL
+    compile("com.querydsl:querydsl-core:${queryDslVersion}")
+    compileOnly "com.querydsl:querydsl-jpa:${queryDslVersion}"
+    annotationProcessor("com.querydsl:querydsl-apt:${queryDslVersion}:jpa")
+    implementation("com.querydsl:querydsl-jpa:${queryDslVersion}")
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    implementation("org.projectlombok:lombok:${lombokVersion}")
+}
