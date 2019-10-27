@@ -9,4 +9,4 @@ services:
     volumes:
       - /data/spring-boot-docker-compose
     ports:
-      - "8081:8081"
+      - "9090:9090"

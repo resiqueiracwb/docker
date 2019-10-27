@@ -1,7 +1,13 @@
-INSERT INTO country (name) VALUES ('India');
-INSERT INTO country (name) VALUES ('Brazil');
-INSERT INTO country (name) VALUES ('USA');
-INSERT INTO country (name) VALUES ('Italy');
+INSERT INTO APPLICATION( NOME, NOME_RESPONSAVEL, EMAIL_RESPONSAVEL) VALUES ('Ressarcimento Fixa', 'Renato','renato.siqueira@telefonica');
+INSERT INTO APPLICATION( NOME, NOME_RESPONSAVEL, EMAIL_RESPONSAVEL) VALUES ('Ressarcimento Móvel', 'Renato','renato.siqueira@telefonica');
+INSERT INTO APPLICATION( NOME, NOME_RESPONSAVEL, EMAIL_RESPONSAVEL) VALUES ('Azkaban', 'Renato','renato.siqueira@telefonica');
+
+insert into grupo (name, chave) values('Administrador', 'ADMINISTRADOR');
+
+
+insert into  usuario (name, email, telefone, senha, grupo_id,ativo) values ('Renato', 'renato.siqueira@telefonica.com' , '4199839714', '$2a$10$.AmrcWYk3yNz7zKHAoXuuOoigUcj5hlc70br457ECkQ8f5cZF3Isa', 1,1);
+
+
 
 insert into predio ( name, qtde_andares, cor, tipo_padrao,is_portaria, qtde_elevadores, nome_sindico, vagas_cobertas,qtde_apartamentos, salao_festas )  values ( 'Houston', 12, 'Bege', 'Alto',1, 2,'Fabio', 1,46,1);
 insert into predio ( name, qtde_andares, cor, tipo_padrao,is_portaria, qtde_elevadores, nome_sindico, vagas_cobertas,qtde_apartamentos, salao_festas )  values ( 'Vegas', 10, 'Verde', 'Alto',1, 10,'Renato', 1,10,1);
