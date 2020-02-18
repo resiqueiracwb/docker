@@ -1,0 +1,18 @@
+#spring.profiles.active: test
+spring:
+  profiles: test
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  jpa:
+    hibernate.ddl-auto: create-drop
+thymeleaf.cache: false
+
+
+env.name: test
+rel.unsco_val: hoge_hoge_file
+jHome: ${JAVA_HOME}
+message: hogehogehoge
+UNSCO_VAL: u_val
